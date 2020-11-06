@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import MainPage from './pages/main';
+import ArtworkPage from './pages/artwork';
+
+const Theme = React.createContext("light")
+
 
 function App() {
+  const [page,setPage] = React.useState("Art")
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Theme.Provider value="light">
+      <div className="App">
+        { page == "Main" && <MainPage></MainPage>}
+        { page == "Art" && <ArtworkPage setPage={setPage} ></ArtworkPage>}
+      </div>
+    </Theme.Provider>
+
   );
 }
 

@@ -1,0 +1,12 @@
+img{
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+}
+
+
+.img-box{
+    background:#C4C4C4;
+    max-width: 140px;
+    max-height: 140px;
+}
