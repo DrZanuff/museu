@@ -1,7 +1,7 @@
 import ArtButton from "./artbutton"
 import './main-style.css'
 
-function MainPage(){
+function MainPage(props){
 
     return(
     <div className="main-body">
@@ -24,10 +24,10 @@ function MainPage(){
         </div>
 
         <div className="img-grid">
-            <ArtButton></ArtButton>
-            <ArtButton></ArtButton>
-            <ArtButton></ArtButton>
-            <ArtButton></ArtButton>
+            <ArtButton fc={props.fc}></ArtButton>
+            <ArtButton fc={props.fc}></ArtButton>
+            <ArtButton fc={props.fc}></ArtButton>
+            <ArtButton fc={props.fc}></ArtButton>
         </div>
 
         <div className="footer">
